@@ -63,7 +63,7 @@ public class ProductController {
                 .orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
-    @PutMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PatchMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ProductDTO> updateProduct(
             @PathVariable("id") Integer productId,
             @Valid @RequestBody ProductDTO productDTO) {
